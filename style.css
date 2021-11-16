@@ -1,5 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    --Very-Light-Gray: hsl(0, 0%, 98%); /*Light Mode Bg*/
+    --White: hsl(0, 0%, 100%); /*Dark Mode Text & Light Mode Elements*/
+    --Dark-Gray : hsl(0, 0%, 52%); /*Light Mode Input*/
+}
 body {
     font-family: 'Nunito Sans', sans-serif;
+    background: var(--Very-Light-Gray);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+    background: var(--White);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.075);
+}
+
+.inputs-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 2.5rem 0rem;
+}
+.inputs-container .fa-search {
+    position: absolute;
+    top: 32%;
+    left: 4%;
+    color: var(--Dark-Gray);
+    cursor: pointer;
+}
+.search-box {
+    position: relative;
+}
+#input, #input-regions {
+    padding: 15px;
+    background: var(--White);
+    border: none;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 5px;
+}
+#input {
+    padding-left: 3.5rem;
+    width: 445px;
+}
+#input-regions {
+    width: 190px;
+}
+main {
+    padding: 0rem 3rem;
 }
 .dark-moon {
     display: none;
@@ -11,4 +63,11 @@ body {
 .card img {
     width: 100%;
     height: 160px;
+}
+
+.country-cards-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
 }
