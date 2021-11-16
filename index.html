@@ -1,15 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="#" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <title>Coutries-API</title>
 </head>
+
 <body>
-    
-    
+    <header class="header">
+        <h2 class="logo">Where in the worls?</h2>
+        <div class="dark-mode-container">
+            <i class="far fa-moon light-moon"></i>
+            <i class="fas fa-moon dark-moon"></i>
+            <a>Dark mode</a>
+        </div>
+    </header>
+    <main>
+        <div class="inputs-container">
+            <i class="fas fa-search"></i>
+            <input id="input" type="text" placeholder="Search for a country...">
+            <select id="input-regions" name="regions" required>
+                <!-- <option value="" default selected>Filter by region</option> -->
+                <option value="africa">Africa</option>
+                <option value="america">America</option>
+                <option value="asia">Asia</option>
+                <option value="europe">Europe</option>
+                <option value="oceania">Oceania</option>
+            </select>
+        </div>
+        <div class="country-cards-container">
+            <div class="card">
+                <img src="https://images.pexels.com/photos/109629/pexels-photo-109629.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                    alt="image">
+                <div class="country-info">
+                    <h3>Germany</h3>
+                    <p>Population: 81,700,900</p>
+                    <p>Region: Europe</p>
+                    <p>Capital: Berlin</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.pexels.com/photos/1202723/pexels-photo-1202723.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                    alt="image">
+                <div class="country-info">
+                    <h3>Germany</h3>
+                    <p>Population: 81,700,900</p>
+                    <p>Region: Europe</p>
+                    <p>Capital: Berlin</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.pexels.com/photos/54097/spain-flag-flutter-spanish-54097.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                    alt="image">
+                <div class="country-info">
+                    <h3>Germany</h3>
+                    <p>Population: 81,700,900</p>
+                    <p>Region: Europe</p>
+                    <p>Capital: Berlin</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.pexels.com/photos/109629/pexels-photo-109629.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                    alt="image">
+                <div class="country-info">
+                    <h3>Germany</h3>
+                    <p>Population: 81,700,900</p>
+                    <p>Region: Europe</p>
+                    <p>Capital: Berlin</p>
+                </div>
+            </div>
+        </div>
+    </main>
     <script src="./script.js"></script>
 </body>
+
 </html>
