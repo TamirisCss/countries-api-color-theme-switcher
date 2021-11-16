@@ -4,9 +4,12 @@
     box-sizing: border-box;
 }
 html {
-    --Very-Light-Gray: hsl(0, 0%, 98%); /*Light Mode Bg*/
-    --White: hsl(0, 0%, 100%); /*Dark Mode Text & Light Mode Elements*/
-    --Dark-Gray : hsl(0, 0%, 52%); /*Light Mode Input*/
+    --Dark-Blue: hsl(209, 23%, 22%);         /*Dark Mode Elements*/
+    --Very-Dark-Blue: hsl(207, 26%, 17%);    /*Dark Mode Background*/
+    --Very-Dark-Blue-Text: hsl(200, 15%, 8%);/*Light Mode Text*/
+    --Dark-Gray : hsl(0, 0%, 52%);           /*Light Mode Input*/
+    --Very-Light-Gray: hsl(0, 0%, 98%);      /*Light Mode Bg*/
+    --White: hsl(0, 0%, 100%);               /*Dark Mode Text & Light Mode Elements*/
 }
 body {
     font-family: 'Nunito Sans', sans-serif;
@@ -20,11 +23,21 @@ body {
     background: var(--White);
     border-bottom: 2px solid rgba(0, 0, 0, 0.075);
 }
+.dark-moon {
+    display: none;
+}
 
+/*INPUT SECTION*/
+main {
+    padding: 0rem 3rem;
+}
 .inputs-container {
     display: flex;
     justify-content: space-between;
     padding: 2.5rem 0rem;
+}
+.search-box {
+    position: relative;
 }
 .inputs-container .fa-search {
     position: absolute;
@@ -33,9 +46,7 @@ body {
     color: var(--Dark-Gray);
     cursor: pointer;
 }
-.search-box {
-    position: relative;
-}
+
 #input, #input-regions {
     padding: 15px;
     background: var(--White);
@@ -50,24 +61,34 @@ body {
 #input-regions {
     width: 190px;
 }
-main {
-    padding: 0rem 3rem;
-}
-.dark-moon {
-    display: none;
-}
-.card {
-    width: 265px;
-    height: 340px;
-}
-.card img {
-    width: 100%;
-    height: 160px;
-}
 
+/*CARDS SECTION*/
 .country-cards-container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    
+}
+.card {
+    width: 265px;
+    height: 340px;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background: var(--White);
+    margin-bottom: 4rem;
+}
+.card img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+.country-info {
+    padding: .80rem 1rem;
+}
+.country-info h3 {
+    margin-bottom: .80rem;
+}
+.country-info p:not(:last-child) {
+    margin-bottom: .20rem;
 }
