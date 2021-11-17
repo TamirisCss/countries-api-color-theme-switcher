@@ -23,6 +23,9 @@ body {
     background: var(--White);
     border-bottom: 2px solid rgba(0, 0, 0, 0.075);
 }
+.dark-mode-container {
+    cursor: pointer;
+}
 .dark-moon {
     display: none;
 }
@@ -75,6 +78,7 @@ main {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     background: var(--White);
     margin-bottom: 4rem;
+    cursor: pointer;
 }
 .card img {
     border-top-left-radius: 5px;
