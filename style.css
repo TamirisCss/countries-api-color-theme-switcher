@@ -78,7 +78,7 @@ main {
 }
 .card {
     width: 265px;
-    height: 340px;
+    height: 350px;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
     background: var(--White);

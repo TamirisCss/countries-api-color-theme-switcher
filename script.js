@@ -9,6 +9,7 @@ modeBtn.addEventListener('click', function() {
 const input = document.querySelector('#input');
 const search = document.querySelector('.fa-search');
 const cardsContainer = document.querySelector('.country-cards-container');
+const select = document.querySelector('#input-regions');
 
 //country list
 let countries = [];
@@ -25,6 +26,7 @@ getCountries();
 
 search.addEventListener('click', filterCountries);
 input.addEventListener('keyup', filterCountries);
+select.addEventListener('change', filterCountriesByRegion);
 
 //TODO implement a filter function based on the input.value
 function filterCountries() {
@@ -39,10 +41,17 @@ function filterCountries() {
     showCountries(filtered)
 }
 
-function filterCountriesByRegion(region) {
-    return "a new list with the countries that match the filter"
+function filterCountriesByRegion() {
+    const region = select.value;
+    if(region === "") {
+        showCountries(countries);
+        return;
+    }
+    const filtered = countries.filter(country => {
+        return country.region === region;
+    })
+    showCountries(filtered)
 }
-
 
 
 function showCountries(data) {
