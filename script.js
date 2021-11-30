@@ -57,7 +57,8 @@ function filterCountriesByRegion() {
 function showCountries(data) {
     cardsContainer.innerHTML = ""
     data.forEach(element => {
-        const card = document.createElement('div');
+        const card = document.createElement('a');
+        card.href = "./country.html";
         card.classList.add('card');
         card.innerHTML = `
         <img src="${element.flags.png}"

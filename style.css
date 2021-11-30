@@ -85,6 +85,10 @@ main {
     color: var(--Very-Dark-Blue-Text);
     margin-bottom: 4rem;
     cursor: pointer;
+    transition: 1s ease;
+}
+.card:hover {
+    transform: scale(1.1);
 }
 .card img {
     border-top-left-radius: 5px;
