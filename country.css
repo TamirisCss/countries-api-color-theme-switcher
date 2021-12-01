@@ -44,11 +44,12 @@
 .border-countries-container h4 {
     font-weight: bold;
 }
-.border-countries-container .borders {
-    margin-left: 1rem;
+.borders {
+    display: flex;
+    flex-wrap: wrap;
 }
 .border-countries-container .borders a{
-    margin-right: 1rem;
+    margin: 5px;
 }
 
 .link-button {
