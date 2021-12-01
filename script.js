@@ -1,11 +1,3 @@
-//dark mode
-const modeBtn = document.querySelector('.dark-mode-container');
-
-modeBtn.addEventListener('click', function() {
-    document.body.classList.toggle('dark-mode');
-})
-
-//API
 const input = document.querySelector('#input');
 const search = document.querySelector('.fa-search');
 const cardsContainer = document.querySelector('.country-cards-container');
@@ -17,8 +9,7 @@ let countries = [];
 async function getCountries() {
     // e.preventDefault();
     const response = await fetch(`https://restcountries.com/v2/all`)
-    const data = await response.json()
-    console.log(data)
+    const data = await response.json();
     countries = data;
     showCountries(countries)
 }
@@ -58,17 +49,16 @@ function showCountries(data) {
     cardsContainer.innerHTML = ""
     data.forEach(element => {
         const card = document.createElement('a');
-        card.href = "./country.html";
+        card.href = `./country.html?country=${element.alpha3Code}`;
         card.classList.add('card');
         card.innerHTML = `
         <img src="${element.flags.png}"
-        alt="image">
+        alt="${element.name} flag">
         <div class="country-info">
             <h3>${element.name}</h3>
             <p>Population: ${element.population}</p>
             <p>Region: ${element.region}</p>
             <p>Capital: ${element.capital}</p>
-            <p>Language: ${element.languages[0].name}</p>
         </div>
         `
         cardsContainer.appendChild(card);
