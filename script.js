@@ -52,7 +52,7 @@ function showCountries(data) {
         card.href = `./country.html?country=${element.alpha3Code}`;
         card.classList.add('card');
         card.innerHTML = `
-        <img src="${element.flags.png}"
+        <img src="${element.flags.svg}"
         alt="${element.name} flag">
         <div class="country-info">
             <h3>${element.name}</h3>
