@@ -20,6 +20,7 @@ body.dark-mode {
 .header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 1rem 3rem;
     background: var(--White);
     color: var(--Very-Dark-Blue-Text);
@@ -75,6 +76,7 @@ main {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: 1.5rem;
 }
 .card {
     width: 265px;
@@ -84,7 +86,7 @@ main {
     background: var(--White);
     color: var(--Very-Dark-Blue-Text);
     text-decoration: none;
-    margin-bottom: 4rem;
+    margin-bottom: 1.5rem;
     cursor: pointer;
     transition: 1s ease;
 }
@@ -108,4 +110,33 @@ main {
 .country-info p:not(:last-child) {
     margin-bottom: .20rem;
     color: var(--Very-Dark-Blue-Text);
+}
+
+@media only screen and (max-width: 738px) {
+    .inputs-container {
+        flex-direction: column;
+    }
+    #input-regions {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    .country-cards-container {
+        justify-content: center;
+    }
+}
+@media only screen and (max-width: 548px) {
+    #input {
+        width: 100%;
+    }
+    .inputs-container {
+        padding: 1rem 0rem;
+    }
+}
+@media only screen and (max-width: 440px) {
+    .header {
+        padding: 1rem 1rem;
+    }
+    main {
+        padding: 0 1rem;
+    }
 }
